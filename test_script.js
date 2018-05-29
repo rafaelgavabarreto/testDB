@@ -24,7 +24,7 @@ client.connect((err) => {
     let results = result.rows
     console.log("Found " + result.rows.length + " person(s) by the name '" + someId + "':");
     for (let i = 0; i < result.rows.length; i++) {
-      console.log("- ", (i + 1), ":", results[i].first_name, results[i].last_name, "born '" + results[i].birthdate.toLocaleDateString() + "'");
+      console.log("- ", (i + 1), ":", results[i].first_name, results[i].last_name, "born: '" + results[i].birthdate.toLocaleDateString() + "'");
     }
 
     client.end();
